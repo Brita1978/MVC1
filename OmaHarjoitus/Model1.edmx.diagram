@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="f0db412ce0ad4d63adb4106ac35b04cd" Name="Diagram1">
+        <EntityTypeShape EntityType="ProjektitModel.Henkilo" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjektitModel.Projekti" Width="1.5" PointX="1.375" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjektitModel.Tunti" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="ProjektitModel.FK_Tunnit_Henkilot" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjektitModel.FK_Tunnit_Projektit" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

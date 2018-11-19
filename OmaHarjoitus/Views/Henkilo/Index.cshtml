@@ -1,0 +1,82 @@
+﻿@model IEnumerable<OmaHarjoitus.Henkilo>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Henkilöt</h2>
+
+<a href="~/Create" span class="glyphicon glyphicon-plus-sign" ></span></a>
+
+<br />
+
+
+@*
+<p>
+    @Html.ActionLink("Create New", "Create", )
+</p>
+*@
+<br />
+
+<table class="table table-striped" id="henkilotable"
+       <thead>
+           <tr>
+               <th>
+                   @Html.DisplayNameFor(model => model.Etunimi)
+               </th>
+               <th>
+                   @Html.DisplayNameFor(model => model.Sukunimi)
+               </th>
+               <th>
+                   @Html.DisplayNameFor(model => model.Osoite)
+               </th>
+               <th>
+                   @Html.DisplayNameFor(model => model.Esimies)
+               </th>
+               <th>
+                   @Html.DisplayNameFor(model => model.HenkiloID)
+               </th>
+               
+
+
+           </tr>
+       </thead>
+
+<tbody>
+    @if (Model.Count() == 0)
+    {
+        <tr>
+            <td colspan="3">
+                No Match Any Document
+            </td>
+        </tr>
+    }
+    else
+    {
+        foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Etunimi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Sukunimi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Osoite)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Esimies)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.HenkiloID)
+                </td>
+                <td>
+                    <a href="~/Edit" class="glyphicon glyphicon-pencil"></a>
+                    <a href="~/Delete" class="glyphicon glyphicon-trash"></a>
+                </td>
+            </tr>
+        }
+    }
+    </tbody>
+</table>
+
